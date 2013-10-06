@@ -1,0 +1,17 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+__u32	binaryreverse.c	/^typedef unsigned int __u32;$/;"	t	file:
+binaryreverse	binaryreverse.c	/^__u32 binaryreverse(__u32 num){$/;"	f
+fa	utils.c	/^int fa(int *a){$/;"	f
+fastsort	utils.c	/^int fastsort(int start, int end, int *a){$/;"	f
+fb	utils.c	/^int fb(int *b){$/;"	f
+getNumOfOne	utils.c	/^int getNumOfOne(int a){$/;"	f
+get_unsigned	utils.c	/^int get_unsigned(unsigned *val, const char *arg, int base)$/;"	f
+guibingsort	utils.c	/^int guibingsort(int *a, int s, int m, int e){$/;"	f
+lplus	utils.c	/^int lplus(int a , int b ,int *c , int *d){$/;"	f
+lpz	utils.c	/^void lpz(char *buff){$/;"	f
+main	helloworld.c	/^int main(void) {$/;"	f
