@@ -5,6 +5,36 @@
 #include <time.h>
 #include <asm/types.h>
 #include <limits.h>
+
+void printArray(int *a,int len);
+//求一个数全排列的下个状态 如123 下一个状态为132
+//从后向前找到a[j]>a[j-1],将j-1位置的数与后面的刚好比它大的数交换，然后再将j-1之后的所有数逆序
+//如：1235698743，首先找到9>6；再找到6后面7比他大，将6和7位置交换，再将98643逆序为34689 最后输出1235734689
+void swap(int* a, int* b){
+	int temp=*a;
+	*a=*b;
+	*b=temp;
+}
+void reverse(int *a, int start,int end){
+	while(start<end){
+		swap(&a[start],&a[end]);
+		start++;
+		end--;
+	}
+}
+void nextState(int *a,int n){
+	if(a==NULL || n <=0)
+		return;
+	int j=n-1;
+	while(j>0 && a[j]<a[j-1])
+		j--;
+	int i = j;
+	while(i<n-1 && a[i]>a[j-1])
+		i++;
+	swap(&a[i-1],&a[j-1]);
+	reverse(a,j,n-1);
+	printArray(a,n);
+}
 //打印数组
 void printArray(int *a,int len){
 	if(a== NULL || len<=0)
@@ -15,7 +45,7 @@ void printArray(int *a,int len){
 	}
 	puts("");
 }
-//逆序对
+//逆序对 实际是归并排序的过程
 int guibing(int *a,int start,int end){
 	if(start==end)
 		return 0;

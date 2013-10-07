@@ -73,4 +73,6 @@ int main(void) {
 	printArray(d,8);
 	inversPairs(d,8);
 	printArray(d,8);
+	int e[9]={1,2,5,6,9,7,8,4,3};
+	nextState(e,9);
 }
