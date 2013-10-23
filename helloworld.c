@@ -75,4 +75,11 @@ int main(void) {
 	printArray(d,8);
 	int e[9]={1,2,5,6,9,7,8,4,3};
 	nextState(e,9);
+	printf("max int %d\n", INT_MAX);
+	printf("max long %ld\n", LONG_MAX);
+	int f[2][3]={1,2,3,4,5,6};
+	int *g = f[0];
+	int (*h)[3]=f;
+	printf("%d\n",*(g+3));
+	printf("%d\n",*(*(h+1)+1));
 }
